@@ -42,17 +42,3 @@
 .btn:disabled{
     opacity: 1 !important;
 }
-
-.activeButtonBackground {
-    background-color: #48149E !important;
-    color:white !important;
-}
-
-.passiveButtonBackground {
-    background-color: #601AD2 !important;
-    color:white !important;
-}
-
-.form-checkbox{
-    padding-left: 2rem !important;
-}

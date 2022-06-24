@@ -1,8 +1,11 @@
 const Footer = () => {
     return(
-        <footer className="main-footer">
-           <h1>Footer</h1>
-        </footer>
+        <div>
+            <footer className="main-footer" style={{backgroundColor: '#EBF5FB', height:60}}>
+                &nbsp;
+            </footer>
+        </div>
+
     );
 }
 

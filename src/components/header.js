@@ -1,8 +1,8 @@
 const Header = () => {
     return(
         <div>
-            <nav className="main-header">
-                <h1>Header</h1>
+            <nav className="main-header" style={{backgroundColor: '#EBF5FB', height:60}}>
+                &nbsp;
             </nav>
         </div>
     )
