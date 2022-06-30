@@ -7,17 +7,12 @@
 }
 
 .sidebar-active .nav-link.active, .sidebar-active .nav-pills .show > .nav-link {
-    color: #f2f5f8 !important;
-    background-color: #281d36 !important;
-}
-
-.card {
-    border-radius: 5px !important;
+    color: #ffffff !important;
+    background-color: #7E93AB !important;
 }
 
 .nav-pills .nav-link:hover {
     color: white !important;
-    background-color: #281d36 !important;
 }
 
 .brand-text {
@@ -25,20 +20,10 @@
     font-weight: 700 !important;
 }
 
-.container-margin{
-    margin-top: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
 .removeBoxShadow{
     box-shadow: none;
 }
 
-.sidebar-icon{
-    font-size: 0.9rem !important;
-}
-
-.btn:disabled{
-    opacity: 1 !important;
+.nav-pills .nav-link {
+    color: #ffffff;
 }
