@@ -3,9 +3,9 @@ import clsx from "clsx";
 
 export const MenuItem = ({title, subTitle, icon, link}) => {
     return (
-        <div className="small-box bg-info">
+        <div className="small-box">
             <div className="inner">
-                <h4>{title}</h4>
+                <span>{title}</span>
                 {subTitle && <p>{subTitle}</p>}
             </div>
             <div className="icon">

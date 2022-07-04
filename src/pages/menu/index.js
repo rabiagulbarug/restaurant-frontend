@@ -21,7 +21,7 @@ const Menu = (props) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">Kategoriler</div>
+                        <div className="col-12 text-center card-title">Kategoriler</div>
                         {isLoading && (<span>Yükleniyor...</span>)}
                         {!isLoading && !error && categories && categories.map(category => (
                             <div className="col-lg-3 col-6" key={category.link}>

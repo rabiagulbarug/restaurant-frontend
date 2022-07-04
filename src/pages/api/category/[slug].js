@@ -6,5 +6,5 @@ export default function handler(req, res) {
         res.status(404).json({ message: 'not_found' });
     }
 
-    res.status(200).json({ data: category }).end();
+    res.status(200).json({ data: category });
 }

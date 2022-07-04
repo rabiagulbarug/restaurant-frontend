@@ -50,5 +50,19 @@
       "slug": "ara-sicaklar",
       "icon": "ion-bag"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Fincan Çay",
+      "price": 200.15
+    },
+    {
+      "id": 1,
+      "categoryId": 2,
+      "name": "Kirli parmaklar",
+      "price": 215
+    }
   ]
 }

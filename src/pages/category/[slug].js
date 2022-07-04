@@ -7,7 +7,13 @@ const Category = (props) => {
     const router = useRouter();
     const {slug} = router.query;
     const [category, setCategory] = useState(props.category);
+    const [products, setProducts] = useState(props.products ?? []);
     const [loadCategory, {data, error, isLoading}] = useApi(`/category/${slug}`);
+    const [loadProducts, {
+        data: productsData,
+        error: productsError,
+        isLoading: isProductsLoading
+    }] = useApi(`/product/category/${category.id}`);
 
     useEffect(() => data && setCategory(data), [data]);
 
@@ -16,7 +22,34 @@ const Category = (props) => {
             <section className="content">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-12">{category.title}</div>
+                        <div className="col-12">
+                            <div className="card">
+                                <div className="card-header">
+                                    <span className="card-title">{category.title}</span>
+                                </div>
+                                <div className="card-body table-responsive p-0">
+                                    <table className="table text-nowrap">
+                                        <thead>
+                                        <tr>
+                                            <th>~</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {products.map(product => (
+                                            <tr key={product.id}>
+                                                <td>{product.id}</td>
+                                                <td>{product.name}</td>
+                                                <td>{product.price}</td>
+                                            </tr>
+                                        ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -37,9 +70,14 @@ export async function getStaticProps({params}) {
         const body = await res?.json();
         const category = body?.data;
 
+        const productsRes = await fetch(`${process.env.HOST}/api/product/category/${category?.id}`);
+        const productsBody = await productsRes?.json();
+        const products = productsBody?.data;
+
         return {
             props: {
-                category
+                category,
+                products,
             }
         }
     } catch (_) {
