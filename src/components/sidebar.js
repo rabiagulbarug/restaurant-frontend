@@ -20,12 +20,17 @@ const Sidebar = () => {
                             <Link href="/employee">
                                 <a className={`nav-link ${router.route === '/employee' && 'active'}`}>
                                     <i></i>
-                                    <p>Employee</p>
+                                    <p>Personel</p>
                                 </a>
                             </Link>
                         </li>
-                        <li>
-
+                        <li className="nav-item">
+                            <Link href="/admin">
+                                <a className={`nav-link ${router.route === '/admin' && 'active'}`}>
+                                    <i></i>
+                                    <p>Admins</p>
+                                </a>
+                            </Link>
                         </li>
                         <li>
 

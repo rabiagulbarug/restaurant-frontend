@@ -1,15 +1,14 @@
-import Layout from "../../components/layout";
 import {useEffect, useState} from "react";
 import {useApi} from "../../hooks/api";
+import Layout from "../../components/layout";
 import {PersonItem} from "../../components/Person/Item";
 
-const Employee = (props) => {
-    const [employees, setEmployees] = useState(props.employees);
-    const [loadEmployee, {data, error, isLoading}] = useApi(`/employee`);
+const Admin = (props) => {
+    const [admins, setAdmins] = useState(props.admins);
+    const [loadAdmins, {data, error, isLoading}] = useApi(`/admin`);
 
-    useEffect(() => data && setEmployees(data), [data]);
-
-    return (
+    useEffect(() => data && setAdmins(data), [data]);
+    return(
         <Layout>
             <section className="content">
                 <div className="container-fluid">
@@ -17,20 +16,20 @@ const Employee = (props) => {
                         <div className="col-12">
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
-                                        <span className="card-title">Personel</span>
-                                        <button className="" type="submit" style={{marginLeft:800}}>Personel Ekle</button>
+                                    <span className="card-title">Admin</span>
+                                    <button className="" type="submit" style={{marginLeft:800}}>Admin Ekle</button>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}
                                 <table className="table text-nowrap">
                                     <tbody>
-                                    {!isLoading && !error && employees && employees.map(employee => (
-                                        <tr key={employee.id}>
+                                    {!isLoading && !error && admins && admins.map(admin => (
+                                        <tr key={admin.id}>
                                             <PersonItem
-                                                name={employee.name}
-                                                surname={employee.surname}
-                                                mail={employee.mail}
-                                                phone={employee.phone}
-                                                salary={employee.salary}
+                                                name={admin.name}
+                                                surname={admin.surname}
+                                                mail={admin.mail}
+                                                phone={admin.phone}
+                                                salary={admin.address}
                                             />
                                         </tr>
                                     ))}
@@ -45,17 +44,16 @@ const Employee = (props) => {
     );
 }
 
+export default Admin;
+
 export async function getStaticProps() {
-    const res = await fetch(`${process.env.HOST}/api/employee`);
+    const res = await fetch(`${process.env.HOST}/api/admin`);
     const body = await res?.json();
-    const employees = body?.data;
+    const admins = body?.data;
 
     return {
         props: {
-            employees
+            admins
         }
     }
 }
-
-
-export default Employee;
