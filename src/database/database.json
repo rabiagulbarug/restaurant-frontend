@@ -64,5 +64,24 @@
       "name": "Kirli parmaklar",
       "price": 215
     }
+  ],
+
+  "employees": [
+    {
+      "id": 1,
+      "name": "Rabia Gül",
+      "surname": "Baruğ",
+      "mail": "rgb@gmail.com",
+      "phone": 54545454,
+      "salary": 5.000
+    },
+    {
+      "id": 2,
+      "name": "Orkun",
+      "surname": "Çakılkaya",
+      "mail": "orkuncakilkaya@gmail.com",
+      "phone": 76577987,
+      "salary": 15.000
+    }
   ]
 }
