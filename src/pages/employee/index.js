@@ -2,6 +2,7 @@ import Layout from "../../components/layout";
 import {useEffect, useState} from "react";
 import {useApi} from "../../hooks/api";
 import {PersonItem} from "../../components/Person/Item";
+import Link from "next/link";
 
 const Employee = (props) => {
     const [employees, setEmployees] = useState(props.employees);
@@ -17,8 +18,10 @@ const Employee = (props) => {
                         <div className="col-12">
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
-                                        <span className="card-title">Personel</span>
-                                        <button className="" type="submit" style={{marginLeft:800}}>Personel Ekle</button>
+                                        <span className="card-title">Employee</span>
+                                    <Link href={{pathname : '/employee/addEmployee'}} >
+                                        <a className="btn" style={{marginLeft:800}}>Add Employee</a>
+                                    </Link>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}
                                 <table className="table text-nowrap">

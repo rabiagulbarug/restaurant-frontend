@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {useApi} from "../../hooks/api";
 import Layout from "../../components/layout";
 import {PersonItem} from "../../components/Person/Item";
+import {PersonDataItem} from "../../components/PersonData/Item";
 
 const Admin = (props) => {
     const [admins, setAdmins] = useState(props.admins);
