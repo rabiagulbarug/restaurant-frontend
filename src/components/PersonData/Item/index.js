@@ -1,16 +1,15 @@
-
 export const PersonDataItem = () => {
-    return(
+    return (
         <div className="col-12">
             <form>
                 <div className="form-group row">
-                    <label htmlFor="name" className="col-sm-1 col-form-label">Name</label>
+                    <label htmlFor="name" className="col-sm-1 col-form-label">İsim</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" id="name"/>
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label htmlFor="surname" className="col-sm-1 col-form-label">Surname</label>
+                    <label htmlFor="surname" className="col-sm-1 col-form-label">Soyisim</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" id="surname"/>
                     </div>
@@ -22,12 +21,11 @@ export const PersonDataItem = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label htmlFor="phone" className="col-sm-1 col-form-label">Phone</label>
+                    <label htmlFor="phone" className="col-sm-1 col-form-label">Telefon</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" id="phone"/>
                     </div>
                 </div>
-                <button className="btn button" type="submit">Kaydet</button>
             </form>
         </div>
     );

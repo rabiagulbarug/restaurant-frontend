@@ -14,3 +14,15 @@ const AddEmployee = () => {
 }
 
 export default AddEmployee;
+
+export async function getStaticProps() {
+    const res = await fetch(`${process.env.HOST}/api/employee`);
+    const body = await res?.json();
+    const employees = body?.data;
+
+    return {
+        props: {
+            employees
+        }
+    }
+}

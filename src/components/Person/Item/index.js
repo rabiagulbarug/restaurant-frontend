@@ -1,5 +1,5 @@
 
-export const PersonItem = ({name, surname, mail, phone, address, salary}) => {
+export const PersonItem = ({name, surname, mail, phone}) => {
 return(
     <div className="col-12">
                 <table className="table text-nowrap">
@@ -9,8 +9,6 @@ return(
                             <td className="col-2">{surname}</td>
                             <td className="col-2">{mail}</td>
                             <td className="col-2">{phone}</td>
-                            {address && <td  className="col-2">{address}</td>}
-                            {salary && <td  className="col-2">{salary}</td>}
                         </tr>
                     </tbody>
                 </table>

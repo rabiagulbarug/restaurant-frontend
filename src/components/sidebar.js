@@ -28,7 +28,7 @@ const Sidebar = () => {
                             <Link href="/admin">
                                 <a className={`nav-link ${router.route === '/admin' && 'active'}`}>
                                     <i></i>
-                                    <p>Admins</p>
+                                    <p>Admin</p>
                                 </a>
                             </Link>
                         </li>

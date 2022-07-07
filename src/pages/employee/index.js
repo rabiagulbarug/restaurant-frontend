@@ -18,9 +18,9 @@ const Employee = (props) => {
                         <div className="col-12">
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
-                                        <span className="card-title">Employee</span>
+                                        <span className="card-title col-10">Personeller</span>
                                     <Link href={{pathname : '/employee/addEmployee'}} >
-                                        <a className="btn" style={{marginLeft:800}}>Add Employee</a>
+                                        <a className="btn">Personel Ekle</a>
                                     </Link>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}

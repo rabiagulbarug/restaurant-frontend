@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useApi} from "../../hooks/api";
 import Layout from "../../components/layout";
 import {PersonItem} from "../../components/Person/Item";
-import {PersonDataItem} from "../../components/PersonData/Item";
+import Link from "next/link";
 
 const Admin = (props) => {
     const [admins, setAdmins] = useState(props.admins);
@@ -17,8 +17,10 @@ const Admin = (props) => {
                         <div className="col-12">
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
-                                    <span className="card-title">Admin</span>
-                                    <button className="" type="submit" style={{marginLeft:800}}>Admin Ekle</button>
+                                    <span className="card-title col-10">Admin</span>
+                                    <Link href={{pathname : '/admin/addAdmin'}} >
+                                        <a className="btn">Admin Ekle</a>
+                                    </Link>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}
                                 <table className="table text-nowrap">
