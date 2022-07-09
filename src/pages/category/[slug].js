@@ -32,8 +32,8 @@ const Category = (props) => {
                                         <thead>
                                         <tr>
                                             <th>~</th>
-                                            <th>Name</th>
-                                            <th>Price</th>
+                                            <th>İsim</th>
+                                            <th>Fiyat</th>
                                         </tr>
                                         </thead>
                                         <tbody>

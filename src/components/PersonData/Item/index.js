@@ -26,6 +26,9 @@ export const PersonDataItem = () => {
                         <input type="text" className="form-control" id="phone"/>
                     </div>
                 </div>
+                <div className="form-group row">
+                    <button type="submit">Kaydet</button>
+                </div>
             </form>
         </div>
     );
