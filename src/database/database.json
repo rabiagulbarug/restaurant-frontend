@@ -97,5 +97,12 @@
       "mail": "orkuncakilkaya@gmail.com",
       "phone": 76577987
     }
+  ],
+  "table": [
+    {
+      "id": 1,
+      "location": "bahçe",
+      "number": 1
+    }
   ]
 }

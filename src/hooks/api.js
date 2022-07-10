@@ -4,10 +4,14 @@ export const useApi = (route) => {
     const [data, setData] = useState(undefined)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(undefined)
-    const load = useCallback(() => {
+    const load = useCallback(({authToken, body, method}) => {
         setIsLoading(true);
         setError(undefined);
-        fetch(`/api/${route}`)
+        fetch(`/api/${route}`, {
+            method: method ?? 'GET',
+            body: body ? JSON.stringify(body) : undefined,
+            headers: authToken ? {'Authorization': `Bearer ${authToken}`} : undefined,
+        })
             .then(res => res.json())
             .then(res => setData(res?.data))
             .catch(err => setError(err))

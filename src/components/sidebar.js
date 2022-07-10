@@ -32,8 +32,13 @@ const Sidebar = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li>
-
+                        <li className="nav-item">
+                            <Link href="/table">
+                                <a className={`nav-link ${router.route === '/table' && 'active'}`}>
+                                    <i></i>
+                                    <p>Masalar</p>
+                                </a>
+                            </Link>
                         </li>
                         <li>
 
