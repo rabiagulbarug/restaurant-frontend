@@ -98,11 +98,26 @@
       "phone": 76577987
     }
   ],
-  "table": [
+  "tables": [
     {
       "id": 1,
       "location": "bahçe",
-      "number": 1
+      "name": "masa 1"
+    },
+    {
+      "id": 2,
+      "location": "bahçe",
+      "name": "masa 2"
+    },
+    {
+      "id": 3,
+      "location": "bahçe",
+      "name": "masa 3"
+    },
+    {
+      "id": 4,
+      "location": "bahçe",
+      "name": "masa 4"
     }
   ]
 }
