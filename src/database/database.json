@@ -101,23 +101,43 @@
   "tables": [
     {
       "id": 1,
-      "location": "bahçe",
-      "name": "masa 1"
+      "location": "garden",
+      "name": "masa 1 bahçe"
     },
     {
       "id": 2,
-      "location": "bahçe",
-      "name": "masa 2"
+      "location": "garden",
+      "name": "masa 2 bahçe"
     },
     {
       "id": 3,
-      "location": "bahçe",
-      "name": "masa 3"
+      "location": "garden",
+      "name": "masa 3 bahçe"
     },
     {
       "id": 4,
-      "location": "bahçe",
-      "name": "masa 4"
+      "location": "garden",
+      "name": "masa 4 bahçe"
+    },
+    {
+      "id": 1,
+      "location": "inside",
+      "name": "masa 1 iç"
+    },
+    {
+      "id": 2,
+      "location": "inside",
+      "name": "masa 2 iç"
+    },
+    {
+      "id": 3,
+      "location": "inside",
+      "name": "masa 3 iç"
+    },
+    {
+      "id": 4,
+      "location": "inside",
+      "name": "masa 4 iç"
     }
   ]
 }

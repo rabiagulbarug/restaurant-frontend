@@ -4,10 +4,10 @@ export const useApi = (route) => {
     const [data, setData] = useState(undefined)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(undefined)
-    const load = useCallback(({authToken, body, method}) => {
+    const load = useCallback(({authToken, body, method, query = new URLSearchParams()}) => {
         setIsLoading(true);
         setError(undefined);
-        fetch(`/api/${route}`, {
+        fetch(`/api/${route}?${query?.toString()}`, {
             method: method ?? 'GET',
             body: body ? JSON.stringify(body) : undefined,
             headers: authToken ? {'Authorization': `Bearer ${authToken}`} : undefined,
