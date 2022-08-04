@@ -3,6 +3,7 @@ import {useApi} from "../../hooks/api";
 import Layout from "../../components/layout";
 import {PersonItem} from "../../components/Person/Item";
 import Link from "next/link";
+import {AdminAddButton} from "../../components/Buttons/AdminAddButton";
 
 const Admin = (props) => {
     const [admins, setAdmins] = useState(props.admins);
@@ -18,9 +19,7 @@ const Admin = (props) => {
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
                                     <span className="card-title col-10">Admin</span>
-                                    <Link href={{pathname : '/admin/addAdmin'}} >
-                                        <a className="btn">Admin Ekle</a>
-                                    </Link>
+                                    <AdminAddButton/>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}
                                 <table className="table text-nowrap">

@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {useApi} from "../../hooks/api";
 import {PersonItem} from "../../components/Person/Item";
 import Link from "next/link";
+import {PersonAddButton} from "../../components/Buttons/PersonAddButton";
 
 const Employee = (props) => {
     const [employees, setEmployees] = useState(props.employees);
@@ -19,9 +20,7 @@ const Employee = (props) => {
                             <div className="card removeBoxShadow">
                                 <div className="card-header">
                                         <span className="card-title col-10">Personeller</span>
-                                    <Link href={{pathname : '/employee/addEmployee'}} >
-                                        <a className="btn">Personel Ekle</a>
-                                    </Link>
+                                    <PersonAddButton/>
                                 </div>
                                 {isLoading && (<span>Yükleniyor...</span>)}
                                 <table className="table text-nowrap">

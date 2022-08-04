@@ -1,5 +1,6 @@
 import {PersonDataItem} from "../../../components/PersonData/Item";
 import Layout from "../../../components/layout";
+import {PersonAddButton} from "../../../components/Buttons/PersonAddButton";
 
 const AddEmployee = () => {
     return(
