@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/globals.css';
 import '../styles/buttons.css';
+import {ProvideAuth} from "../hooks/use-auth";
 
 function MyApp({Component, pageProps}) {
     return (
-        <Component {...pageProps} />
+        <ProvideAuth>
+            <Component {...pageProps} />
+        </ProvideAuth>
     );
 }
 
