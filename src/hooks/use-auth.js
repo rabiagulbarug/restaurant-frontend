@@ -23,12 +23,8 @@ const useProvideAuth = () => {
             method: 'POST',
             body: JSON.stringify({username, password})
         }).then(res => res.json()).then(res => res.data);
-        if (user?.role === 'customer') {
-            throw new Error('not authorized');
-        }
         setUser(user);
         localStorage.setItem('user', JSON.stringify(user));
-
         return user;
     };
 
